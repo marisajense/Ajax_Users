@@ -1,0 +1,29 @@
+<h1 class='center'>Hello, Users</h1>
+<hr />
+
+<form id='add-user-form' method='POST' action='api/v1/courses'>
+  <label>First Name</label>
+  <input id='user-first-name' type='text' name='user[first_name]' required />
+  <br />
+
+  <label>Last Name</label>
+  <input id='user-last-name' type='text' name='user[last_name]' required />
+  <br />
+
+  <label>Phone Number (Format: xxx-xxx-xxxx):</label>
+  <input id="user-phonenum" type="tel" pattern="^\d{3}-\d{3}-\d{4}$" name='user[phone_number]' required />
+  <br />
+
+  <input type="checkbox" id="user-active" name='user[active]' />
+    <label for="user-active">User Active?</label>
+  <br />
+
+<input type='submit' class='btn orange' />
+</form>
+
+<h3>User List</h3>
+<!-- INDEX ACTION-->
+<button id='get-users' class='btn green'>All Users</button>
+<div id='users' class='row'>
+
+</div>
