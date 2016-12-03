@@ -73,7 +73,19 @@ $(document).ready(function() {
     }).success(function(data) {
       console.log('show')
       var user = data
-      $users.append("<div col s12 class='btn black'>" + user.first_name + " " + user.last_name + " " + user.phone_number + "</div>")
+      // $users.append("<div col s12 class='btn black'>" + user.first_name + " " + user.last_name + " " + user.phone_number + "</div>")
+      $users.append(
+        "<div class='row'>" +
+          "<div class='col s12 m6'>" +
+            "<div class='card blue-grey darken-1'>" +
+              "<div class='card-content white-text'>" +
+                "<span class='card-title'>" + "Name: " + user.first_name + " " + user.last_name + "</span>" +
+                "<p>" + "Phone Number: " + user.phone_number + "</p>" +
+              "</div>" +
+            "</div>" +
+          "</div>" +
+        "</div>"
+      )
     }).fail(function(data) {
       console.log(data);
     });
